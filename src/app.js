@@ -58,7 +58,7 @@ async function updateShaStatus(body, res) {
               let message = `Rule \`${element}[${index}]\` failed`;
               message = item.message || message;
               failureMessages.push(message);
-              const URL = item.URL || defaultFailureURL;
+              const URL = item.detailsURL || defaultFailureURL;
               failureURLs.push(URL);
             }
           } catch (e) {
